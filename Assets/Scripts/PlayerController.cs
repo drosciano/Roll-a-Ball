@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float movementX;
     private float movementY;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         if (count >= 13)
         {
             winTextObject.SetActive(true);
+            GameObject.Find("Player").SendMessage("Finnish");
         }
     }
 
@@ -59,5 +61,7 @@ public class PlayerController : MonoBehaviour
             SetCountText();
         }
     }
+
+
 
 }
